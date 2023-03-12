@@ -144,8 +144,8 @@ app.use("/campground/:id/reviews",reviewsRoutes);
     res.status(statusCode).render("error",{err});
  })
 
- 
-app.listen(3000,(req,res)=>
+ const port=process.env.PORT||3000;
+app.listen(port,(req,res)=>
 {
-    console.log("Listening")
+    console.log(`Listening on ${port}` )
 }) 
