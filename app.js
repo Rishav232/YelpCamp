@@ -42,7 +42,7 @@ app.use(express.static(path.join(__dirname,"public")))
 app.use(mongoSanitize());
 app.use(flash())
 
-const store=new upMongoStore({
+const store=new MongoStore({
     mongoUrl:db_url,
     secret:"thisismysecret",
     touchAfter:24*60*60
